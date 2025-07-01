@@ -1,4 +1,4 @@
-import React from "react";
+
 import CarImageGallery from "./CarImageGallery";
 
 const CarInfo = () => {
@@ -20,7 +20,7 @@ const CarInfo = () => {
         <span className="w-1 h-5 bg-[#01AA45] mr-2"></span> Car Info
       </h2>
 
-      {/* Main Car Info */}
+      {/* Car Info */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center mb-4">
         <div className="flex flex-row">
           <img src="Milage.png" alt="Mileage" className="mx-2 mt-1 w-5 h-5" />

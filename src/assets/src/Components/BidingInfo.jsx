@@ -1,6 +1,40 @@
 import "../css/BiddingInfo.css"
+import { useState,useEffect } from "react";
 
 const BiddingInfo = () => {
+
+  // Convert initial time to total seconds
+  const initialSeconds =
+    15 * 24 * 60 * 60 + 6 * 60 * 60 + 17 * 60 + 48;
+
+  const [remainingSeconds, setRemainingSeconds] = useState(initialSeconds);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setRemainingSeconds(prev => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  // Helper to format time units
+  const formatTime = (seconds) => {
+    const days = Math.floor(seconds / (24 * 60 * 60));
+    seconds %= 24 * 60 * 60;
+    const hours = Math.floor(seconds / (60 * 60));
+    seconds %= 60 * 60;
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+
+    return [
+      { label: "Days", value: days },
+      { label: "Hours", value: hours },
+      { label: "Minutes", value: minutes },
+      { label: "Seconds", value: secs }
+    ];
+  };
+
+  const timeParts = formatTime(remainingSeconds);
   return (
     <section className="flex w-1/2">
     <div className="space-y-4 w-[60%]">
@@ -10,14 +44,14 @@ const BiddingInfo = () => {
           <span className="w-1 h-5 bg-[#01AA45] mr-2"></span> Bid Information
         </h2>
 
-        <div className="flex justify-between gap-2 text-center mb-4">
-          {["15 Days", "06 Hours", "17 Minutes", "48 Seconds"].map((item, idx) => (
-            <div key={idx} className={`border rounded p-2 flex-1 timercount`}>
-              <div className="text-sm font-bold text-[#333333]">{item.split(" ")[0]}</div>
-              <div className="text-xs text-[#333333]">{item.split(" ")[1]}</div>
-            </div>
-          ))}
+       <div className="flex justify-between gap-2 text-center mb-4 flex-wrap">
+      {timeParts.map((part, idx) => (
+        <div key={idx} className="border rounded p-2 flex-1 min-w-[60px] timercount">
+          <div className="text-sm font-bold text-[#333333]">{part.value}</div>
+          <div className="text-xs text-[#333333]">{part.label}</div>
         </div>
+      ))}
+    </div>
 
         <div className="space-y-1 text-sm">
           <div className="flex justify-between "><span className="bidsts">Bid Status :</span><span className="font-normal bidval">Pre Bid</span></div>
@@ -30,7 +64,7 @@ const BiddingInfo = () => {
             <p className="text-[#666666] text-[14px]">Your Bid</p>
           <div className="flex items-center gap-2 mb-2 mt-2 text-[14px]">
             
-            <input type="radio" name="bidType" checked className="accent-[#01AA45]" />
+            <input type="radio" name="bidType" className="accent-[#01AA45]" />
             <span className="text-sm">Max Bid</span>
             <input type="radio" name="bidType" className="accent-[#01AA45]" />
             <span className="text-sm">Monster Bid</span>
@@ -93,7 +127,7 @@ const BiddingInfo = () => {
         <div className="space-y-2 text-sm p-2">
             <span className="text-[#666666] font-[700]">Select State</span>
           <select className="border rounded w-full py-1 px-2 bg-[#FFFFFF] font-[400] text-[#666666] stateselect">
-            <option selected>Select</option>
+            <option>Select</option>
           </select>
            <span className="text-[#666666] font-[700] ">Pickup Location</span>
           <input className="border rounded w-full py-1 px-2 pickuplocation" placeholder="Pickup Location"></input>
