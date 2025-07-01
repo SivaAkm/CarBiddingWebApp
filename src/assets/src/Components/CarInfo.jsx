@@ -1,13 +1,12 @@
-
 import CarImageGallery from "./CarImageGallery";
 
 const CarInfo = () => {
     const images = [
   "GalleryImg1.png",
- "Car1.png",
- "Car2.png",
-  "Car3.png",
-  "Car4.png",
+ "GalleryImg2.png",
+ "GalleryImg3.png",
+  "GalleryImg4.png",
+  "GalleryImg5.png",
  
 ];
 

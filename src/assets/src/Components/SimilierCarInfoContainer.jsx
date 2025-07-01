@@ -1,4 +1,3 @@
-import React from 'react'
 import projectsData from "../utils/mockData"
 const SimilierCarInfoContainer = () => {
     
@@ -22,7 +21,7 @@ const SimilierCarInfoContainer = () => {
           <p className="text-xs text-[#333333]">{project.agency}</p>
         </div>
         
-        <img className="text-[#E2952D] text-lg" src="Star.png" alt="☆"></img> 
+         <button><img className="text-[#E2952D] text-lg" src="Star.png" alt="☆"></img>  </button>
       </div>
 
       <div className="flex flex-row items-center justify-between mt-2 text-xs">
