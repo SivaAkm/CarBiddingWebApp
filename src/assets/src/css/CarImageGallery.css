@@ -5,6 +5,18 @@ top: 228px;
 left: 315px;
 
 }
+@media (max-width:650px) {
+  .mainimg{
+width: 350px;
+height: 150px;
+  }
+.otherimages{
+    width: 72px;
+height: 72px;
+}
+
+}  
+
 .otherimages{
     width: 72px;
 height: 72px;

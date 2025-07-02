@@ -36,8 +36,8 @@ const BiddingInfo = () => {
 
   const timeParts = formatTime(remainingSeconds);
   return (
-    <section className="flex w-1/2">
-    <div className="space-y-4 w-[60%]">
+    <section className="flex w-1/2 [@media(max-width:655px)]:w-full p-4">
+    <div className="space-y-4 w-[60%] [@media(max-width:655px)]:w-full">
     
       <div className="bg-[#FFFFFF] space-y-2 shadow-sm rounded-lg p-4 mt-2 sm:p-6 bidInfo">
         <h2 className="text-lg font-semibold text-[#333333] flex items-center mb-3">
@@ -104,7 +104,7 @@ const BiddingInfo = () => {
           <span className="w-1 h-5 bg-[#01AA45] mr-2"></span> Shipping Estimate
         </h2>
         <p className="font-[700] text-[#666666]">Select Shipping Type</p>
-<div className="flex mb-3 mt-2 gap-2 font-[500] text-[16px] text-[#333333]">
+<div className="flex mb-3 mt-2 gap-2 font-[500] text-[16px] text-[#333333] [@media(max-width:650px)]:flex-col">
   <button className="flex-1 border hover:border-[#01AA45] rounded flex overflow-hidden bg-[#F8F9FA] h-[51px]">
     <div className="bg-[#01AA45] w-[41px] h-full flex items-center justify-center">
       <img src="DomesticIcon.png" alt="Domestic" className="w-full h-full object-contain" />
@@ -138,7 +138,7 @@ const BiddingInfo = () => {
            <span className="text-[#666666] font-[700]">Drop off Location</span>
           <input className="border rounded w-full py-1 px-2 DropLocation " placeholder="Drop off Location" />
           <span className="text-[#666666] font-[700] ">Others (Specify)</span>
-          <div className="flex gap-2">
+          <div className="flex gap-2 ">
             <input className="border rounded flex-1 py-1 px-2 otherstxtbox" placeholder="Specify" />
             <button className="bg-[#E2952D] text-[#FFFFFF] rounded px-2 estimatebtn">Check Estimate</button>
           </div>

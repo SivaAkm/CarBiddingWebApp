@@ -13,7 +13,7 @@ const CarInfo = () => {
   return (
     
 
-    <div className="bg-white rounded-lg p-4 sm:p-6 w-1/2">
+    <div className="bg-white rounded-lg p-4 sm:p-6 w-1/2 [@media(max-width:655px)]:w-full">
         <CarImageGallery images={images} />
       <h2 className="text-lg font-semibold text-[#01AA45] mb-3 mt-4 flex items-center">
         <span className="w-1 h-5 bg-[#01AA45] mr-2"></span> Car Info

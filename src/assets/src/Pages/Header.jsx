@@ -3,21 +3,23 @@ import "../css/Header.css";
 const Header = () => {
   return (
     <header>
-      <div className="flex flex-wrap items-center justify-between md:justify-around px-4 sm:px-8 md:px-16 lg:px-32 py-4 gap-4 md:gap-8 lg:gap-16 shadow-sm bg-white">
+      <div className="flex flex-wrap items-center justify-between md:justify-around px-4 sm:px-2 md:px-16 lg:px-32 py-4 
+      gap-4 md:gap-8 lg:gap-16 shadow-sm bg-white">
         {/* Search section */}
         <div className="flex flex-wrap flex-auto justify-end gap-2 sm:flex-row">
           <input
             type="text"
-            className="Search_box text-sm w-auto sm:w-auto md:w-auto "
+            className="Search_box text-sm w-auto"
             placeholder="Search Inventory by Make, Model, VIN, and More..."
           />
-          <button className="Search_btn flex items-center justify-center">
+          <button className="Search_btn flex items-center justify-center sm:w-auto md:w-auto">
             <img src="image.png" alt="search" className="Search_img w-4 h-4" />
           </button>
         </div>
 
         {/* Header details */}
-        <ul className="headerDetails flex flex-wrap items-center gap-3 sm:gap-4 md:gap-5 text-sm text-gray-800">
+        <ul className="headerDetails flex flex-wrap items-center gap-3   
+        text-sm text-gray-800">
           <li className="flex items-center gap-1">
             <img src="XMLID_5691_.png" className="usa_img w-6 h-6" alt="USA flag" />
             <span>USA</span>
@@ -42,7 +44,8 @@ const Header = () => {
         </ul>
       </div>
 
-      <nav className="navbar bg-[#01AA45] px-2 sm:px-4 md:px-8 py-2 sm:py-3 text-white text-xs sm:text-sm flex flex-wrap items-center justify-between">
+      <nav className="navbar bg-[#01AA45] px-2 sm:px-4 md:px-8 py-2 sm:py-3 text-white text-xs 
+      sm:text-sm flex flex-wrap items-center justify-between">
         <div className="flex flex-wrap gap-2 sm:gap-4 md:gap-6">
           <a href="#" className="hover:underline cursor-pointer">HOW IT WORKS</a>
           <a href="#" className="hover:underline cursor-pointer">INVENTORY ▾</a>

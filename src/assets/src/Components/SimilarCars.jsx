@@ -27,10 +27,10 @@ const SimilarCars = () => {
   };
   return (
     <div
-      className="container mx-auto py-4 px-6 md:px-20 lg:px-32 my-2 w-full overflow-hidden"
+      className="container mx-auto py-4 px-6 md:px-20 lg:px-32 my-2 w-full overflow-hidden "
       id="Projects"
     >
-      <div className="flex items-center space-x-3 gap-36 SimilarHeader_main">
+      <div className="flex items-center space-x-3 gap-36 SimilarHeader_main [@media(max-width:655px)]:flex-col [@media(max-width:655px)]:gap-0">
 
   <div className="flex items-center gap-4">
  <div className="w-[5px] h-[69px] GreenLine "></div> 
@@ -67,9 +67,9 @@ const SimilarCars = () => {
 </div>
 
 </div>
-      <div className="overflow-hidden w-full">
+      <div className="overflow-hidden w-full [@media(max-width:655px)]:overflow-auto">
         <div
-          className="flex gap-8 transition transform duration-500 ease-in-out"
+          className="flex gap-8 transition transform duration-500 ease-in-out [@media(max-width:655px)]:gap-2 w-[90%]"
           style={{
             transform: `translateX(-${(CurrentIndex * 100) / CardstoShow}%)`,
           }}

@@ -1,20 +1,19 @@
-
 .Search_btn {
-  width: 40px;
+  width: 100%;
+  max-width: 40px;
   height: 40px;
-  background: #E2952D;
+  background: #e2952d;
   border-radius: 50%;
 }
 .Search_box::placeholder {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 19px;
-  color: #AAAAAA;
+  color: #aaaaaa;
+  text-align: center;
 }
-
-
 
 .Search_box {
   width: 358px;
@@ -25,60 +24,68 @@
   padding-left: 20px;
 }
 
-
-.vector_img{
-    width: 8;
-height: 4.949999809265137;
-top: 40px;
-left: 1280px;
-
+@media (max-width: 455px) {
+  .Search_box {
+    width: 70%;
+  }
+  .Search_box::placeholder {
+   font-size: xx-small;
+  }
+  .Search_btn {
+  width: 70%;
 }
 .headerDetails{
-    font-family: DM Sans;
-font-weight: 400;
-font-size: 13px;
-line-height: 100%;
-letter-spacing: 0%;
-
-}
-.register_img{
-    width: 16;
-height: 16;
-top: 35px;
-left: 1321px;
-
-}
-.login_img{
-    width: 16;
-height: 16;
-top: 35px;
-left: 1417px;
-
-}
-.usa_img{
-width: 24;
-height: 24;
-top: 32px;
-left: 1152px;
-
+width: 70%;
 }
 
-.recline{
-    width: 1;
-height: 24;
-top: 32px;
-left: 1219px;
-
 }
-.navbar{
-font-family: DM Sans;
-font-weight: 700;
-font-size: 13px;
-line-height: 100%;
-letter-spacing: 0%;
-text-transform: uppercase;
-color: #FFFFFF;
-height: 70px;
-top: 88px;
+.vector_img {
+  width: 8;
+  height: 4.949999809265137;
+  top: 40px;
+  left: 1280px;
+}
+.headerDetails {
+  font-family: DM Sans;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.register_img {
+  width: 16;
+  height: 16;
+  top: 35px;
+  left: 1321px;
+}
+.login_img {
+  width: 16;
+  height: 16;
+  top: 35px;
+  left: 1417px;
+}
+.usa_img {
+  width: 24;
+  height: 24;
+  top: 32px;
+  left: 1152px;
+}
 
+.recline {
+  width: 1;
+  height: 24;
+  top: 32px;
+  left: 1219px;
+}
+.navbar {
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #ffffff;
+ 
+  height: 100%;
+  top: 88px;
 }
