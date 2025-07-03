@@ -6,7 +6,7 @@ const Header = () => {
       <div className="flex flex-wrap items-center justify-between md:justify-around px-4 sm:px-2 md:px-16 lg:px-32 py-4 
       gap-4 md:gap-8 lg:gap-16 shadow-sm bg-white">
         {/* Search section */}
-        <div className="flex flex-wrap flex-auto justify-end gap-2 sm:flex-row">
+        <div className="flex flex-wrap flex-auto justify-end gap-2 [@media(max-width:655px)]:justify-center sm:flex-row">
           <input
             type="text"
             className="Search_box text-sm w-auto"

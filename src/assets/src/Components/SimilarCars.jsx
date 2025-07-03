@@ -30,7 +30,8 @@ const SimilarCars = () => {
       className="container mx-auto py-4 px-6 md:px-20 lg:px-32 my-2 w-full overflow-hidden "
       id="Projects"
     >
-      <div className="flex items-center space-x-3 gap-36 SimilarHeader_main [@media(max-width:655px)]:flex-col [@media(max-width:655px)]:gap-0">
+      <div className="flex space-x-3 gap-36 SimilarHeader_main 
+      [@media(max-width:655px)]:flex-col items-start [@media(max-width:655px)]:gap-0">
 
   <div className="flex items-center gap-4">
  <div className="w-[5px] h-[69px] GreenLine "></div> 
@@ -44,7 +45,7 @@ const SimilarCars = () => {
   </div>
   </div>
 <div className="flex items-center justify-end space-x-2 mb-8 SimilarNav_main">
-  <a href="#" className="text-[#E2952D] SimilarNav_link">
+  <a href="#" className="text-[#E2952D] SimilarNav_link [@media(max-width:655px)]:mr-10">
     Explore More &gt;
   </a>
 
